@@ -4,39 +4,49 @@
   }
 }
 
+dependencies {
+    classpath 'com.google.gms:google-services:4.3.15'
+    // ...
+}
+// dogfood and release are build types.
+app/
+    google-services.json
+    src/dogfood/google-services.json
+    src/release/google-services.json
+    ...
+// free and paid are product flavors.
+app/
+    google-services.json
+    src/dogfood/paid/google-services.json
+    src/release/free/google-services.json
+    ...
+{
+  "project_info": {...},
+  "client": [...],
+}
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
 
-<!-- Google tag (gtag.js) -->
+    <! -- Present in all applications -->
+    <string name="google_app_id" translatable="false">1:1035469437089:android:73a4fb8297b2cd4f</string>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FHCNVQVL6W"'></script>
+    <! -- Present in applications with the appropriate services configured -->
+    <string name="gcm_defaultSenderId" translatable="false">1035469437089</string>
+    <string name="default_web_client_id" translatable="false">337894902146-e4uksm38sne0bqrj6uvkbo4oiu4hvigl.apps.googleusercontent.com</string>
+    <string name="ga_trackingId" translatable="false">UA-65557217-3</string>
+    <string name="firebase_database_url" translatable="false">https://example-url.firebaseio.com</string>
+    <string name="google_api_key" translatable="false">AIzbSyCILMsOuUKwN3qhtxrPq7FFemDJUAXTyZ8</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzbSyCILMsOuUKwN3qhtxrPq7FFemDJUAXTyZ8</string>
+    <string name="project_id" translatable="false">mydemoapp</string>
 
-<script>
-
-  window.dataLayer = window.dataLayer || [];
-
-  function gtag(){dataLayer.push(arguments);}
-
-  gtag('js', new Date());
-
-  gtag('config', 'G-FHCNVQVL6W'');
-
-</script>356517251
-
-<!-- Google tag (gtag.js) -->
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-FHCNVQVL6W"></script>
-
-<script>
-
-  window.dataLayer = window.dataLayer || [];
-
-  function gtag(){dataLayer.push(arguments);}
-
-  gtag('js', new Date());
-
-  gtag('config', 'G-FHCNVQVL6W');
-
-</script>
-
-buildscript {
-
-  repositories {
+</resources>
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ga_trackingId" translatable="false">UA-65557218-3</string>
+</resources>
++{YOUR_CLIENT}/client_info/mobilesdk_app_id
++project_info/project_number
++{YOUR_CLIENT}/services/analytics-service/analytics_property/tracking_id
++project_info/firebase_url
++{YOUR_CLIENT}/api_key/current_key
++project_info/project_id
